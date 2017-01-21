@@ -10,8 +10,7 @@ package
 	public class Assets 
 	{
 		//[Embed(source = "../assets/bg/level1.jpg")]
-		[Embed(source="../assets/bg/level2.jpg")]
-		
+		[Embed(source="../assets/bg/level1.jpg")]
 		public static const BgLevel1:Class;
 		
 		private static var gameTextures:Dictionary = new Dictionary();

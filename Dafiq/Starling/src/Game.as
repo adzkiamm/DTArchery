@@ -12,6 +12,7 @@ package
 	public class Game extends Sprite 
 	{
 		private var playPage:PlayPage;
+		private var hero:Hero;
 		
 		public function Game() 
 		{
@@ -26,7 +27,10 @@ package
 			trace("WELCOME TO MY WAY");
 			
 			playPage = new PlayPage();
+			hero = new Hero();
+			//hero.x = -180
 			this.addChild(playPage);
+			this.addChild(hero);
 			
 		}
 		

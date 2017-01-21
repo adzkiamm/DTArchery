@@ -1,5 +1,6 @@
 package 
 {
+	import render.ArmatureRender;
 	import starling.display.Sprite;
 	import dragonBones.objects.DragonBonesData;
 	import dragonBones.starling.StarlingFactory;
@@ -8,26 +9,27 @@ package
 	
 	/**
 	 * ...
-	 * @author Zain
+	 * @author jihad
 	 */
 	public class Hero extends Sprite 
 	{
-		[Embed(source = "../assets/AnimationBaseTest/AnimationBaseTest.json", mimeType = "application/octet-stream")]
+	
+	[Embed(source="../assets/dragon bones/hero/hero.json", mimeType="application/octet-stream")]
 	public static const DBDataA: Class;
 
-	[Embed(source = "../assets/AnimationBaseTest/texture.json", mimeType = "application/octet-stream")]
+	[Embed(source="../assets/dragon bones/hero/texture.json", mimeType="application/octet-stream")]
 	public static const TADataA1: Class;
 
-	[Embed(source = "../assets/AnimationBaseTest/texture.png")]
+	[Embed(source="../assets/dragon bones/hero/texture.png")]
 	public static const TextureA1: Class;
 
-	private var _isTouched:Boolean = false;
-	private var _armatureDisplay: StarlingArmatureDisplay = null;
-	private const _factory: StarlingFactory = new StarlingFactory();
+	private var display:ArmatureRender;
 		public function Hero() 
 		{
 			super();
+			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Armature", "jalan");
 			
+			this.addChild(display);
 		}
 		
 	}

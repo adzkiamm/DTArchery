@@ -6,7 +6,7 @@ package pages
 	
 	/**
 	 * ...
-	 * @author sendy ambon
+	 * @author fahmy ash
 	 */
 	public class PlayPage extends Sprite 
 	{

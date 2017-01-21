@@ -11,6 +11,7 @@ package
 	public class Game extends Sprite 
 	{
 		private var playPage:PlayPage;
+		private var hero:Hero
 		
 		public function Game() 
 		{
@@ -23,7 +24,10 @@ package
 			trace("Starling Framework initialized!");
 			
 			playPage = new PlayPage();
+			hero	 = new Hero();
+			
 			this.addChild(playPage);
+			this.addChild(hero);
 		}
 	}
 

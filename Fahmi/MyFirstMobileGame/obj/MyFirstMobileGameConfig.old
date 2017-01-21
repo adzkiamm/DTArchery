@@ -16,7 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'9/17/2016'</value>
+      <value>'1/21/2017'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -32,15 +32,16 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>D:\Akar Multimedia SMA\MMSemester1-2016\fahmy ashraf's 19\MyFirstMobileGame\src</path-element>
+      <path-element>D:\Akar Multimedia SMA\DTArchery\Fahmi\MyFirstMobileGame\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Tools\aslib</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\Starling\Hi-ReS-Stats-master\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\Starling\Starling-Framework\starling\src</path-element>
+      <path-element>C:\Program Files (x86)\FlashDevelop\Library\DragonBonesAS-master\DragonBones\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>D:\Akar Multimedia SMA\MMSemester1-2016\fahmy ashraf's 19\MyFirstMobileGame\src\Main.as</path-element>
+    <path-element>D:\Akar Multimedia SMA\DTArchery\Fahmi\MyFirstMobileGame\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
