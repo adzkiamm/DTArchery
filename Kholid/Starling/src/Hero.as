@@ -32,8 +32,8 @@ package
 		
 		{
 			super();
-			display = new ArmatureRender(DBDataA, TADataA1, Texturea1, "mecha_1502b", "walk");
-			
+			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Armature", "ahead");
+			addChild (display);
 		}
 		
 	}

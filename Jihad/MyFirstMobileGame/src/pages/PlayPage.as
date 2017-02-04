@@ -20,6 +20,7 @@ package pages
 		private var pohonB:Image;
 		private var tanah:Image;
 		private var tanahB:Image;
+		private var mount:Image;
 		
 		public function PlayPage() 
 		{
@@ -57,6 +58,11 @@ package pages
 			//this.addChild(bg);
 			
 			
+			
+			mount = new Image (Assets.getTexture("Mount"));
+			addChild(mount);
+			town = new Image (Assets.getTexture("Town"));
+			addChild(town);
 			pohon = new Image (Assets.getTexture("Pohon"));
 			addChild(pohon);
 			
@@ -66,6 +72,7 @@ package pages
 			addChild(matahari);
 			awan = new Image (Assets.getTexture("Awan"));
 			addChild(awan);
+			
 			
 			addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}

@@ -28,9 +28,18 @@ package
 			
 			playPage = new PlayPage();
 			hero = new Hero();
+			hero.x =-350
+			hero.y =0
+			//hero.scaleX = 0.2;
+			//hero.scaleY = 0.2;
+			//hero.height = 20
+			//hero.width = 10
+			
+			
 			
 			this.addChild(playPage);
 			this.addChild(hero);
+			trace("done add");
 			
 		}
 		

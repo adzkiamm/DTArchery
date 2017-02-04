@@ -25,9 +25,12 @@ package
 			
 			playPage = new PlayPage();
 			hero	 = new Hero();
+			hero.y = 140;
+			hero.x = -400;
 			
 			this.addChild(playPage);
 			this.addChild(hero);
+			trace("done add");
 		}
 	}
 

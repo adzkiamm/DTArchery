@@ -30,7 +30,7 @@ package
 		
 		{
 			super();
-			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "hero", "Jalan");
+			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Armature", "Jalan");
 			
 			this.addChild(display);
 		

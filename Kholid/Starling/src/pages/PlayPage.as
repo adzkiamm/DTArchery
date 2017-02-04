@@ -4,6 +4,7 @@ package pages
 	import starling.display.Sprite;
 	import starling.events.Event;
 	import starling.text.TextField;
+	import starling.text.TextFormat;
 	import starling.textures.Texture;
 	
 	/**
@@ -104,7 +105,7 @@ package pages
 			tanahB = new Image (Assets.getTexture("Tanah"));
 			this.addChild(tanahB);
 			
-			var textField:TextField = new TextField(600, 400, " Prototype Landscape Game", "Helvetica", 60 , 0x666666, true);
+			var textField:TextField = new TextField(600, 400, "Prototype Landscape Game", new TextFormat("Helvetica", 60 , 0x666666));
 			textField.x = 100 ;
 			textField.y = 60 ;
 			addChild (textField);

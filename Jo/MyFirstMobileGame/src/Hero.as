@@ -32,9 +32,9 @@ package
 		public function Hero() 
 		{
 			super();
-			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "hero", "Jalan");
+			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Hero", "jalan");
 			
-			this.addChild(display);
+			addChild(display);
 		}
 		
 	}

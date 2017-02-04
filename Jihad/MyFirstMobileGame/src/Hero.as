@@ -27,7 +27,7 @@ package
 		public function Hero() 
 		{
 			super();
-			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Armature", "jalan");
+			display = new ArmatureRender(DBDataA, TADataA1, TextureA1, "Armature", "panah");
 			
 			this.addChild(display);
 		}

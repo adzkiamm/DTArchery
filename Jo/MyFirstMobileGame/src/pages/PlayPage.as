@@ -5,7 +5,8 @@ package pages
 	import starling.events.Event;
 	import starling.text.TextField;
 	import starling.utils.Color;
-	
+	import starling.text.TextFormat;
+	import starling.text.TrueTypeCompositor;
 	/**
 	 * ...
 	 * @author Joe
@@ -107,9 +108,6 @@ package pages
 			//sky.y = -180;
 			//skyF.width = ;
 			
-			var textField:TextField = new TextField(600, 400, " Prototype landscape game ", "Arial", 60, 0x666666, true);
-			textField.x = 100;
-			textField.y = 60;
 			
 			
 			
@@ -126,7 +124,7 @@ package pages
 			addChild(ground);
 			addChild(groundF);
 			
-			addChild(textField);
+			
 		}
 		
 	}
