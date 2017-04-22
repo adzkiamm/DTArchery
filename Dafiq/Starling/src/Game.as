@@ -2,6 +2,10 @@ package
 {
 	
 	import com.greensock.TweenMax;
+	import feathers.controls.PickerList;
+	import feathers.controls.renderers.DefaultListItemRenderer;
+	import feathers.controls.renderers.IListItemRenderer;
+	import feathers.data.ListCollection;
 	import flash.ui.Keyboard;
 	import pages.PlayPage;
 	import starling.display.Sprite;
@@ -11,6 +15,11 @@ package
 	import starling.events.TouchEvent;
 	import starling.events.TouchPhase;
 	
+	import feathers.controls.Button;
+	import feathers.controls.TextCallout;
+	import feathers.themes.MetalWorksMobileTheme;
+	
+	
 	/**
 	 * ...
 	 * @author dafiq
@@ -19,6 +28,7 @@ package
 	{
 		private var playPage:PlayPage;
 		private var hero:Hero;
+		private var button:Button;
 		
 		public function Game() 
 		{
@@ -49,6 +59,8 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			trace("WELCOME TO MY WAY");
 			
+			new MetalWorksMobileTheme();
+			
 			playPage = new PlayPage();
 			hero = new Hero();
 			hero.x = -100
@@ -61,9 +73,46 @@ package
 			this.addChild(hero);
 			
 			// event listener
-			this.addEventListener ( TouchEvent.TOUCH, onteken);
+			//this.addEventListener ( TouchEvent.TOUCH, onteken);
 			stage.addEventListener (KeyboardEvent.KEY_DOWN, onpencet); 
 			
+			/* CONTROL */
+			
+			this.button = new Button();
+			this.button.label = "Panah";
+			this.addChild (button);
+			
+			this.button.addEventListener( Event.TRIGGERED, ontombol)
+			
+			this.button.validate();
+			this.button.x = (this.stage.stageWidth - this.button.width) / 2 ;
+			this.button.y = (this.stage.stageHeight - this.button.height) / 2 ; 
+			
+			// test other feather ui
+			var list:PickerList = new PickerList();
+			this.addChild( list );
+			
+			var groceryList:ListCollection = new ListCollection(
+			[
+				{ text: "panah" },
+				{ text: "bintang" },
+				{ text: "pedang" },
+				{ text: "perisai" },
+			]);
+			list.dataProvider = groceryList;
+			
+			list.itemRendererFactory = function():IListItemRenderer
+			{
+				var itemRenderer:DefaultListItemRenderer = new DefaultListItemRenderer();
+				itemRenderer.labelField = "text";
+				return itemRenderer;
+			}
+		}
+		
+		private function ontombol(e:Event):void 
+		{ 
+			TextCallout.show( "Welcome in my game", this.button );
+			hero.action("memanah");
 		}
 		
 		private function onpencet(e:KeyboardEvent):void 
