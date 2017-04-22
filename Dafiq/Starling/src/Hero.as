@@ -37,6 +37,10 @@ package
 			
 		}
 		
+		public function action(actType:String):void {
+			display.changeAnimation(actType);
+		}
+		
 	}
 
 }

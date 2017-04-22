@@ -1,9 +1,15 @@
 package 
 {
 	
+	import com.greensock.TweenMax;
+	import flash.ui.Keyboard;
 	import pages.PlayPage;
 	import starling.display.Sprite;
 	import starling.events.Event;
+	import starling.events.KeyboardEvent;
+	import starling.events.Touch;
+	import starling.events.TouchEvent;
+	import starling.events.TouchPhase;
 	
 	/**
 	 * ...
@@ -18,6 +24,23 @@ package
 		{
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE , onAddedToStage);
+		}
+		
+		private function onteken(e:TouchEvent):void 
+		{
+			trace("onteken");
+			
+			var touch:Touch = e.getTouch(this);
+			trace (touch);
+			if (touch == null){
+				return;
+			}
+			
+			if (touch.phase == TouchPhase.BEGAN) {
+				hero.action("memanah");
+			} else if (touch.phase == TouchPhase.ENDED){
+				hero.action ("Jalan");
+			}
 			
 		}
 		
@@ -37,6 +60,25 @@ package
 			this.addChild(playPage);
 			this.addChild(hero);
 			
+			// event listener
+			this.addEventListener ( TouchEvent.TOUCH, onteken);
+			stage.addEventListener (KeyboardEvent.KEY_DOWN, onpencet); 
+			
+		}
+		
+		private function onpencet(e:KeyboardEvent):void 
+		{ 
+			trace("lompat");
+			if(e.keyCode==Keyboard.SPACE){
+				hero.action("lompat");
+				TweenMax.to (hero , 0.4 , {y:"-50" , yoyo:true , repeat:1 , onComplete:lompatselesai});
+			}
+			
+		}
+		
+		private function lompatselesai():void 
+		{
+			hero.action ("Jalan");
 		}
 		
 	}

@@ -5,17 +5,20 @@ package
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
+	import flash.geom.Rectangle;
 	import flash.ui.Multitouch;
 	import flash.ui.MultitouchInputMode;
 	import net.hires.debug.Stats;
 	import starling.core.Starling;
+	import starling.utils.RectangleUtil;
+	import starling.utils.ScaleMode;
 	
 	/**
 	 * ...
 	 * @author dafiq
 	 */
 	
-	 [SWF(frameRate = "60", width="800" , height="600" , backgroundcolour="0x333399")]
+	 [SWF(frameRate = "60", width="800" , height="600" , backgroundcolour="0xff0000")]
 	public class Main extends Sprite 
 	
 	{
@@ -37,8 +40,20 @@ package
 			
 			stat = new Stats;
 			addChild (stat);
+			/*
+			var viewPort:Rectangle = RectangleUtil.fit(
+				new Rectangle(0, 0, 800, 600),
+				new Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight),
+				ScaleMode.SHOW_ALL
+			)
 			
-			myStarling = new Starling (Game , stage );
+			Starling.handleLostContext = true;*/
+			//myStarling = new Starling (Game , stage, viewPort );
+			myStarling = new Starling (Game , stage);
+			/*myStarling.stage.stageWidth = 800;
+			myStarling.stage.stageHeight = 600;
+			myStarling.enableErrorChecking = true;
+			myStarling.showStats = true;*/
 			myStarling.antiAliasing = 1;
 			myStarling.start();
 			
